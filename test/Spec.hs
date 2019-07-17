@@ -1,2 +1,7 @@
+import Test.Hspec
+
+import DiagnoseSpec
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = hspec $ do
+  diagnoseSpec

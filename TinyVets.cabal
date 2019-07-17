@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: acc8afcb2cbdd1a13e5d37a73eecd39e998caeaa00fd35c02b4ea96026ecfa18
+-- hash: 8cd7b011fc7220a0f86b7a2e2e2196dad68d8feb9170387cdd8f2bea443b5a68
 
 name:           TinyVets
 version:        0.1.0.0
@@ -27,7 +27,21 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      ActionDice
+      Actions
+      Actor
+      Ailment
+      Aquire
+      Bonus
+      Care
+      Diagnose
+      Equipment
+      Expand
+      Heal
+      Patient
+      Skill
+      Study
+      Triage
   other-modules:
       Paths_TinyVets
   hs-source-dirs:
@@ -52,6 +66,7 @@ test-suite TinyVets-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      DiagnoseSpec
       Paths_TinyVets
   hs-source-dirs:
       test
@@ -59,4 +74,5 @@ test-suite TinyVets-test
   build-depends:
       TinyVets
     , base >=4.7 && <5
+    , hspec
   default-language: Haskell2010
