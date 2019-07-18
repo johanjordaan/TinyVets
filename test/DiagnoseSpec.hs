@@ -1,12 +1,16 @@
 module DiagnoseSpec where
 import Test.Hspec
 
-import Actions
+import Actor.Actions
   
-import Actor
-import Ailment
+import Actor.Actor
+import Ailment.Ailment
 import ActionDice
 import Equipment
+
+import Card.Card
+import Card.Deck
+
 
 diagnoseSpec = do
   describe "..." $ do

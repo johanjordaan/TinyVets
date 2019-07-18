@@ -1,10 +1,10 @@
-module Care where
+module Actor.Actions.Care where
   
-import Actions
+import Actor.Actions
 import Bonus
   
-import Actor
-import Ailment
+import Actor.Actor
+import Ailment.Ailment
 import Patient
 import ActionDice
 import Equipment
@@ -13,9 +13,8 @@ care :: Actor -> Patient -> [Equipment] -> ActionDice -> ActionResult
 care actor patient equipment actionDice = 
   let
     baseSkill = careSkill actor
-    specialised = elem (family patient) (specialisations actor) 
     equipmentBonus = foldl (\acc e -> acc + (careBonus (equipmentBonuses e))) 0 equipment 
-    result = getResult actionDice False specialised 
+    result = getResult actionDice False (isSpecialised actor patient) 
     success = result - equipmentBonus <= baseSkill
   in if success then Success else Failure
   

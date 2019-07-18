@@ -1,4 +1,4 @@
-module Actions where
+module Actor.Actions where
 
 data ActionResult = Success | Failure
 

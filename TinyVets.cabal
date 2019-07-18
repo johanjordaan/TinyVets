@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8cd7b011fc7220a0f86b7a2e2e2196dad68d8feb9170387cdd8f2bea443b5a68
+-- hash: 16258dfb4c56b51c28ca4c4bef62dd94bae0c6b8303e63683129232061787c04
 
 name:           TinyVets
 version:        0.1.0.0
@@ -28,20 +28,32 @@ source-repository head
 library
   exposed-modules:
       ActionDice
-      Actions
-      Actor
-      Ailment
-      Aquire
+      Actor.Actions
+      Actor.Actions.Aquire
+      Actor.Actions.Care
+      Actor.Actions.Diagnose
+      Actor.Actions.Expand
+      Actor.Actions.Heal
+      Actor.Actions.Study
+      Actor.Actions.Triage
+      Actor.Actor
+      Ailment.Ailment
+      Ailment.Category
+      Ailment.Severity
       Bonus
-      Care
-      Diagnose
+      Card.Card
+      Card.Deck
       Equipment
-      Expand
-      Heal
+      Event
+      Locations.Home
+      Locations.Hospital
+      Locations.Recovery
+      Locations.WaitingRoom
       Patient
+      Player
       Skill
-      Study
-      Triage
+      Specialisation
+      Supply
   other-modules:
       Paths_TinyVets
   hs-source-dirs:

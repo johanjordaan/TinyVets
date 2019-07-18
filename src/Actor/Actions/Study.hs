@@ -1,10 +1,10 @@
-module Study where
+module Actor.Actions.Study where
   
-import Actions
+import Actor.Actions
 import Bonus
   
-import Actor
-import Ailment
+import Actor.Actor
+import Ailment.Ailment
 import Patient
 import ActionDice
 import Equipment
